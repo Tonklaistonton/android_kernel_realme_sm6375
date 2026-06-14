@@ -155,4 +155,4 @@ arch/arm/boot/dts/vendor
 Android.bp
 
 #Ignoring build.sh file
-build.sh
+build_ggez.sh
