@@ -32,9 +32,5 @@ ifeq ($(TUNING_PLATFORM),mtk)
 snd-soc-sia81xx-objs += sia81xx_tuning_if_dev.o
 endif
 
-ifeq ($(COMPILE_TO_MODULE),y)
 EXTRA_CFLAGS += -DSIA81XX_COMPILE_TO_MODULE
-obj-m += snd-soc-sia81xx.o
-else
 obj-y += snd-soc-sia81xx.o
-endif
