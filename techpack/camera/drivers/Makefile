@@ -12,6 +12,19 @@ endif
 ccflags-y += -I$(srctree)/techpack/camera/include/uapi/camera
 ccflags-y += -I$(srctree)
 
+# Force built-in for HOLI — export from holicamera.conf doesn't reach
+# recursive sub-makes via $(MAKE) in Makefile.build.
+CONFIG_SPECTRA_CAMERA := y
+CONFIG_SPECTRA_ISP := y
+CONFIG_SPECTRA_ICP := y
+CONFIG_SPECTRA_JPEG := y
+CONFIG_SPECTRA_FD := y
+CONFIG_SPECTRA_LRME := y
+CONFIG_SPECTRA_SENSOR := y
+CONFIG_SPECTRA_CUSTOM := y
+CONFIG_SPECTRA_OPE := y
+CONFIG_SPECTRA_TFE := y
+
 camera-y := \
 	cam_req_mgr/cam_req_mgr_core.o \
 	cam_req_mgr/cam_req_mgr_dev.o \

@@ -2341,13 +2341,13 @@ static const struct snd_kcontrol_new wcd937x_snd_controls[] = {
 };
 
 #ifdef OPLUS_ARCH_EXTENDS
-const char * const die_crk_det_en_text[] = {"0x80", "0xC0"};
-const u8 det_en[] = {0x80, 0xC0};
+static const char * const die_crk_det_en_text[] = {"0x80", "0xC0"};
+static const u8 det_en[] = {0x80, 0xC0};
 
-const char * const die_crk_det_int1_text[] = {"0xC2", "0x82", "0x42", "0x02"};
-const u8 det_int1[] = {0xC2, 0x82, 0x42, 0x02};
+static const char * const die_crk_det_int1_text[] = {"0xC2", "0x82", "0x42", "0x02"};
+static const u8 det_int1[] = {0xC2, 0x82, 0x42, 0x02};
 
-const char * const die_crk_det_out_text[] = {"0x00"};
+static const char * const die_crk_det_out_text[] = {"0x00"};
 
 static SOC_ENUM_SINGLE_EXT_DECL(die_crk_det_en_enum, die_crk_det_en_text);
 static SOC_ENUM_SINGLE_EXT_DECL(die_crk_det_int1_enum, die_crk_det_int1_text);
